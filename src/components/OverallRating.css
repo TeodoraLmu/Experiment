@@ -1,0 +1,20 @@
+.box{
+
+    width: 300px;
+    margin : auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.cursor-pointer {
+
+    cursor: pointer;
+}
+
+.emoji{
+
+    width: 3.5em;
+    color : black;
+
+}

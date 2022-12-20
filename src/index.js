@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Likes from './components/Likes';
+import Dislikes from './components/Dislikes';
+import Home from './components/Home';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import OverallRating from './components/OverallRating';
+import Additional from './components/Additional';
+import Email from './components/Email';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+    <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Likes" element={<Email />} />
+      <Route path="/Dislikes" element={<Dislikes />} />
+      <Route path="/OverallRating" element={<OverallRating />} />
+      <Route path="/Additional" element={<Additional/>} />
+      <Route path="/Email" element={<Email/>} />
+    </Routes>
+    
+  </Router>
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export { default as Likes } from "./components/Likes";
+export { default as Dislikes } from "./components/Dislikes";
+export { default as Home } from "./components/Home";
+export { default as OverallRating } from "./components/OverallRating";
+export { default as Additional } from "./components/Additional";
+export { default as Email } from "./components/Email";
