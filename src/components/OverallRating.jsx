@@ -78,17 +78,72 @@ function RatingIcon(props){
     return 'none';
   }, [rating,hoverRating,index]);
 
-  return (
-    <div 
-      class='cursor-pointer'
-      onMouseEnter={()=> onMouseEnter(index)}
-      onMouseLeave={()=> onMouseLeave()}
-      onClick={()=> onSaveRating(index)}>
-      <Sad fill={fill}/>
-     
-    </div>
+  if(index==5){
+    return (
+      <div 
+        class='cursor-pointer'
+        onMouseEnter={()=> onMouseEnter(index)}
+        onMouseLeave={()=> onMouseLeave()}
+        onClick={()=> onSaveRating(index)}>
+        <Sad fill={fill}/>
+      </div>
 
-  )
+    )
+  }
+  else if(index==4){
+    return (
+      <div 
+        class='cursor-pointer'
+        onMouseEnter={()=> onMouseEnter(index)}
+        onMouseLeave={()=> onMouseLeave()}
+        onClick={()=> onSaveRating(index)}>
+        <Neutral fill={fill}/>
+       
+      </div>
+
+    )
+  }
+  else if(index==3){
+    return (
+      <div 
+        class='cursor-pointer'
+        onMouseEnter={()=> onMouseEnter(index)}
+        onMouseLeave={()=> onMouseLeave()}
+        onClick={()=> onSaveRating(index)}>
+        <Smile fill={fill}/>
+       
+      </div>
+
+    )
+  }
+  else if(index==2){
+    return (
+      <div 
+        class='cursor-pointer'
+        onMouseEnter={()=> onMouseEnter(index)}
+        onMouseLeave={()=> onMouseLeave()}
+        onClick={()=> onSaveRating(index)}>
+        <Happy fill={fill}/>
+       
+      </div>
+
+    )
+  }
+  else if(index==1){
+    return (
+      <div 
+        class='cursor-pointer'
+        onMouseEnter={()=> onMouseEnter(index)}
+        onMouseLeave={()=> onMouseLeave()}
+        onClick={()=> onSaveRating(index)}>
+        <Hearts fill={fill}/>
+       
+      </div>
+
+    )
+  }
+
+  
 }
 const OverallRating = () => {
   const [rating,setRating] = useState(0);
