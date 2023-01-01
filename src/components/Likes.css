@@ -91,5 +91,22 @@ align-items: center;
   margin-top: 30px;
   max-width: 500px;
 }
+.tag:hover{
 
+  background-color: rgb(110, 155, 155);
+
+  border: #000000;
+}
+.tag:visited{
+
+  background-color: yellow;
+
+  border: #000000;
+}
+.tag:focus{
+
+  background-color: rgb(110, 155, 155);
+
+  border: #000000;
+}
 

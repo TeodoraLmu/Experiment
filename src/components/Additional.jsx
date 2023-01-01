@@ -3,31 +3,23 @@ import {useState} from "react";
 import logo  from './Travelbuddy.png' 
 import { hover } from "@testing-library/user-event/dist/hover";
 import "./Additional.css"
-import Icon from '@material-ui/core/Icon';
 
 var valueEmoji = 1;
 var valueTag='nothing';
-
 function Additional(){
     
-    const emojis = [
-        { label: "Bad", icon: "mood_bad" },
-        { label: "Dissatisfied", icon: "sentiment_dissatisfied" },
-        { label: "Neutral", icon: "sentiment_neutral" },
-        { label: "Satisfied", icon: "sentiment_satisfied_alt" },
-        { label: "Happy", icon: "mood" },
+    const [show,setShow]=useState(false);
+    const [colorEmoji, setEmoji] = useState(false);
+    const emojiColor = (colorEmoji) => {
         
-    ]
-    const [show,setShow]= useState(false);
-    
-    const style = {
-        cursor: "pointer",
-        color: show ? '  rgb(216, 157, 20)' : '',
-        
-    };
-    
+        setEmoji(!colorEmoji);
+    }
+    const [active, setActive] = useState(false);
+    const handleClick = (active) => {
+      setActive(!active);
+    }
     return <div>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet" ></link>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <div className="header"><img src={logo}></img></div>
@@ -37,29 +29,20 @@ function Additional(){
             <div className="container">   
             <h2 className="title">Cleanliness</h2>
                 <div className="scale">
-                
-                {emojis.map(({ label, icon }) => {
-                    return (
-                <span key={label} class="material-icons md-48" style={style} >
-                    <Icon onClick={handleClick}>{icon}</Icon>
-                </span>
-        );
-      })}
-
-                <span class="material-icons md-48" id="1"
-                onClick={()=>{valueEmoji=1;  setShow(!show)}}>
+                <span class="material-icons md-48 
+               " onClick={()=>{valueEmoji=1;  setShow(!show)}}>
                     mood_bad
                 </span>
-                <span className="material-icons md-48" id="2" onClick={()=>{valueEmoji=2; setShow(!show);}} style={style}>
+                <span className="material-icons md-48" onClick={()=>{valueEmoji=2;  setShow(!show);  }}>
                     sentiment_dissatisfied
                 </span>
-                <span class="material-icons md-48" id="3"  onClick={()=>{valueEmoji=3; setShow(!show) }}>
+                <span class="material-icons md-48"  onClick={()=>{valueEmoji=3; setShow(!show) }}>
                         sentiment_neutral
                 </span>
-                <span class="material-icons md-48" id="4" onClick={()=>{valueEmoji=4; setShow(!show)}}>
+                <span class="material-icons md-48" onClick={()=>{valueEmoji=4; setShow(!show)}}>
                     sentiment_satisfied_alt
                 </span>
-                <span class="material-icons md-48" id="5" onClick={()=>{valueEmoji=5; setShow(!show)}}>
+                <span class="material-icons md-48" onClick={()=>{valueEmoji=5; setShow(!show)}}>
                     mood
                 </span>
                 </div></div>

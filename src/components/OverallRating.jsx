@@ -10,10 +10,7 @@ import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-
 import { hover } from "@testing-library/user-event/dist/hover";
-
-
 
 function Sad(props){
   const {fill = 'none'} = props;
@@ -56,14 +53,6 @@ function Hearts(props){
   );
 }
 
-function Emojis(props){
-
-  const {fill = 'none'} = props;
-
- 
-
-  
-}
 
 
 function RatingIcon(props){
@@ -96,7 +85,6 @@ function RatingIcon(props){
       onMouseLeave={()=> onMouseLeave()}
       onClick={()=> onSaveRating(index)}>
       <Sad fill={fill}/>
-      <Happy fill={fill}/>
      
     </div>
 
