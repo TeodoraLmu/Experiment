@@ -12,9 +12,22 @@
     cursor: pointer;
 }
 
+.overall{
+
+    margin-top: 200px;
+    text-align: center;
+
+}
+.container-overall{
+
+    width: fit-content;
+    margin: auto;
+}
 .emoji{
 
     width: 3.5em;
     color : black;
 
 }
+
+

@@ -3,21 +3,11 @@ import {useState} from "react";
 import logo  from './Travelbuddy.png' 
 import { hover } from "@testing-library/user-event/dist/hover";
 import "./Additional.css"
+import ScaleCleanliness from "./ScaleCleanliness";
 
-var valueEmoji = 1;
-var valueTag='nothing';
+
 function Additional(){
-    
-    const [show,setShow]=useState(false);
-    const [colorEmoji, setEmoji] = useState(false);
-    const emojiColor = (colorEmoji) => {
-        
-        setEmoji(!colorEmoji);
-    }
-    const [active, setActive] = useState(false);
-    const handleClick = (active) => {
-      setActive(!active);
-    }
+
     return <div>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet" ></link>
@@ -25,93 +15,13 @@ function Additional(){
       <div className="header"><img src={logo}></img></div>
         
         <div className='main-container'>
-    
             <div className="container">   
-            <h2 className="title">Cleanliness</h2>
+                <h2 className="title">Cleanliness</h2>
                 <div className="scale">
-                <span class="material-icons md-48 
-               " onClick={()=>{valueEmoji=1;  setShow(!show)}}>
-                    mood_bad
-                </span>
-                <span className="material-icons md-48" onClick={()=>{valueEmoji=2;  setShow(!show);  }}>
-                    sentiment_dissatisfied
-                </span>
-                <span class="material-icons md-48"  onClick={()=>{valueEmoji=3; setShow(!show) }}>
-                        sentiment_neutral
-                </span>
-                <span class="material-icons md-48" onClick={()=>{valueEmoji=4; setShow(!show)}}>
-                    sentiment_satisfied_alt
-                </span>
-                <span class="material-icons md-48" onClick={()=>{valueEmoji=5; setShow(!show)}}>
-                    mood
-                </span>
-                </div></div>
-                <div className ='tags-additional'>
-                
-            {
-            show && (valueEmoji===5) ? 
-            <div > <button className = "tag-additional" >Private</button>
-            <button className = "tag-additional" >Good temperature</button>
-            <button onClick={()=>{valueTag='Spacious' ; console.log(valueTag); console.log(active); handleClick(active); console.log(active);}}
-        className={active && (valueTag==='Spacious') ? "cont2" : "tag-additional" }>Spacious</button>
-            <button onClick={()=>{valueTag='Well decorated' ; console.log(valueTag); console.log(active); handleClick(active); console.log(active);}}
-        className={active && (valueTag==='Well decorated') ? "cont2" : "tag-additional"} >Well decorated</button>
-            <button className='tag-additional'>Quiet</button>
-            </div>:null
-           
-            
-            }
-        
-            
-            {
-            show && (valueEmoji===4) ?
-            <div><button className='tag-additional'>Comfy bed</button>
-            <button className='tag-additional'>Well maintained</button>
-            
-            <button className='tag-additional'>Spacious</button>
-            <button className='tag-additional'>Renovated</button>
-            <button className='tag-additional'>Quiet</button>
-            </div>:null
-            
-            }     
+                    <ScaleCleanliness/>
+                </div>
+            </div>
 
-            {
-            show && (valueEmoji===3) ?
-            <div><button className='tag-additional'>Fresh sheets</button>
-            <button className='tag-additional'>Water too cold</button>
-            
-            <button className='tag-additional'>Place too small</button>
-            <button className='tag-additional'>Needs better furniture</button>
-            {
-              
-              console.log(valueEmoji)
-          }</div>:null
-            
-            } 
-
-            {
-            show && (valueEmoji===2) ?
-            <div><button className='tag-additional'>Dirty sheets</button>
-            <button className='tag-additional'>Bad service</button>
-            <button className='tag-additional'>Cold</button>
-            {
-              
-              console.log(valueEmoji)
-          }</div>:null
-            
-            }
-
-            {
-            
-            show && (valueEmoji===1) ?
-            <div><button className='tag-additional'>Mold</button>
-            <button className='tag-additional'>Insects</button>
-            <button className='tag-additional'>Smelly</button>
-           </div>:null
-            
-            } 
-
-        </div>
 
 
         {/* <div className="container"> 

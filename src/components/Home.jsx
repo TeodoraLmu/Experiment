@@ -48,8 +48,8 @@ The researcher will not identify you by your real name in any reports using info
             <h4 className="warning">*By clicking on the "Start" button you consent to participation rules</h4> 
             </p>
 
-            <a href="./Email" target="_blank" rel="noreferrer">
-            <button title="By clicking this button you consent to participation rules"className="start">Start</button>
+            <a href="./Likes" target="_self" rel="noreferrer">
+            <button title="By clicking this button you consent to participation rules" className="start">Start</button>
             </a>
             
         

@@ -65,48 +65,8 @@ align-items: center;
   float: right;
 
 }
-.tag{
-
-  background-color: rgb(202, 227, 227);
- 
-  height: 40px;
-  width: fit-content;
-  font-size: 0.85rem;
-  font-style: bold;
-  margin-top: 10px;
-  border-radius: 20px;
-  border-style: solid;
-  border: #2e2e34;
-  cursor: pointer;
-  padding: 0px 10px;
-  margin-left: 10px;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  
-  
-
-
-}
-
 .tags{
   margin-top: 30px;
   max-width: 500px;
-}
-.tag:hover{
-
-  background-color: rgb(110, 155, 155);
-
-  border: #000000;
-}
-.tag:visited{
-
-  background-color: yellow;
-
-  border: #000000;
-}
-.tag:focus{
-
-  background-color: rgb(110, 155, 155);
-
-  border: #000000;
 }
 

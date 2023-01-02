@@ -1,7 +1,9 @@
 import React from "react";
 import {useState} from "react";
 import logo  from './Travelbuddy.png'
-
+import likestTags from './likesTags';
+import Like from './Like';
+import LikesContainer from './LikesContainer';
 import './Likes.css';
 <script src="./script.js"></script>
 function Likes(){
@@ -29,26 +31,9 @@ mood
             className='input-box'/>
     
         <div className ='tags'>
-            
-            <button className='tag'>Parking place</button> 
-            <button className='tag'>Good location</button>
-            <button className='tag'>Comfy beds</button>
-            <button className='tag'>Good breakfast</button>
-            <button className='tag'onClick={myFunction()}>Well decorated</button>
-          <button className='tag' id="showMore" onClick={()=>{setShow(true); setHideLightbox(false)}}>Show more...</button>
-            
-    
-            {
-            
-            show?
-            <div><button className='tag'>Fast internet</button>
-            <button className='tag'>Clean</button>
-            <button className='tag'>Good coffee</button>
-            <button className='tag'>Other(specify)</button></div>:null
-            
-            } 
+        <LikesContainer></LikesContainer>
         </div>
-        <a href="./Dislikes" target="_blank" rel="noreferrer">
+        <a href="./Dislikes" target="_self" rel="noreferrer">
         <button className='comment-button'>Next</button></a>
         </div>
         

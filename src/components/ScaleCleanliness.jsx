@@ -138,7 +138,7 @@ function RatingIcon(props){
 
   
 }
-const OverallRating = () => {
+const ScaleCleanliness = () => {
   const [rating,setRating] = useState(0);
   const [hoverRating, setHoverRating] = React.useState(0);
   const onMouseEnter = (index) => {
@@ -153,11 +153,9 @@ const OverallRating = () => {
 
   return (
     <div className="overall">
-        <div className="header"><img src={logo}></img></div>
+        
       <div class="container-overall">
-            <h1 className="intro-overall">
-              Hello traveller! How was your stay?
-            </h1>
+            
             <div className="box">
               {[1,2,3,4,5].map((index)=> {
                 return(
@@ -169,12 +167,10 @@ const OverallRating = () => {
               )}
             
             </div>
-            <a href="./Likes" target="_self" rel="noreferrer">
-            <button className='start'>Next</button>
-            </a>
+            
       </div>
     </div>
   );
 }
 
-export default OverallRating;
+export default ScaleCleanliness;
