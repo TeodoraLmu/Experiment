@@ -2,6 +2,7 @@
   "name": "travelbuddy",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://{TeodoraLmu}.github.io/{Experiment}",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -27,6 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy" : "gh-pages -d build",
+    "predeploy":"npm run build",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
