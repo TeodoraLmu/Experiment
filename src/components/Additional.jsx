@@ -13,16 +13,12 @@ function Additional(){
             rel="stylesheet" ></link>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <div className="header"><img src={logo}></img></div>
-        
         <div className='main-container'>
             <div className="container">   
-                <h2 className="title">Cleanliness</h2>
                 <div className="scale">
                     <ScaleCleanliness/>
                 </div>
             </div>
-
-
 
         {/* <div className="container"> 
             <h2 className="title">Location </h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./Checkbox.css"
+import "../Checkbox.css"
 
 const Dislike = ({ type = 'button', name, checked=false, onClick }) => (
   <input type={type} name={name} className='tag' value={name} checked={!checked} onClick={onClick}  style={{

@@ -1,7 +1,14 @@
 import React from "react";
 import {useState} from "react";
 import "./OverallRating.css"
+import "./Likes.css"
+import "./Additional.css"
 import logo  from './Travelbuddy.png'
+import Cleanliness4Container from "./Cleanliness/Cleanliness4Container";
+import Cleanliness1Container from "./Cleanliness/Cleanliness1Container";
+import Cleanliness2Container from "./Cleanliness/Cleanliness2Container";
+import Cleanliness3Container from "./Cleanliness/Cleanliness3Container";
+import Cleanliness5Container from "./Cleanliness/Cleanliness5Container";
 
 import { hover } from "@testing-library/user-event/dist/hover";
 
@@ -47,7 +54,6 @@ function Hearts(props){
 }
 
 
-
 function RatingIcon(props){
 
   const{
@@ -73,25 +79,29 @@ function RatingIcon(props){
 
   if(index==5){
     return (
+      
       <div 
         class='cursor-pointer'
         onMouseEnter={()=> onMouseEnter(index)}
         onMouseLeave={()=> onMouseLeave()}
-        onClick={()=> onSaveRating(index)}>
+        onClick={()=> {onSaveRating(index)}}>
         <Sad fill={fill}/>
       </div>
+     
 
     )
+    
   }
   else if(index==4){
     return (
+      
       <div 
         class='cursor-pointer'
         onMouseEnter={()=> onMouseEnter(index)}
         onMouseLeave={()=> onMouseLeave()}
         onClick={()=> onSaveRating(index)}>
         <Neutral fill={fill}/>
-       
+  
       </div>
 
     )
@@ -104,8 +114,10 @@ function RatingIcon(props){
         onMouseLeave={()=> onMouseLeave()}
         onClick={()=> onSaveRating(index)}>
         <Smile fill={fill}/>
-       
+         
       </div>
+       
+      
 
     )
   }
@@ -117,7 +129,7 @@ function RatingIcon(props){
         onMouseLeave={()=> onMouseLeave()}
         onClick={()=> onSaveRating(index)}>
         <Happy fill={fill}/>
-       
+
       </div>
 
     )
@@ -130,9 +142,10 @@ function RatingIcon(props){
         onMouseLeave={()=> onMouseLeave()}
         onClick={()=> onSaveRating(index)}>
         <Hearts fill={fill}/>
-       
-      </div>
 
+      </div>
+      
+      
     )
   }
 
@@ -152,22 +165,45 @@ const ScaleCleanliness = () => {
   };
 
   return (
-    <div className="overall">
+    <div className="main-container">
         
-      <div class="container-overall">
-            
+      <div class="container">
+      <h2 className="title">Cleanliness</h2> 
             <div className="box">
+            
               {[1,2,3,4,5].map((index)=> {
                 return(
                   console.log(rating), //printing out scores 
-                  <RatingIcon index={index} rating={rating} hoverRating={hoverRating} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onSaveRating={onSaveRating}></RatingIcon>
-                  
+                <>  
+            <div className="scale"><RatingIcon index={index} rating={rating} hoverRating={hoverRating} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onSaveRating={onSaveRating}></RatingIcon></div></>
+
                 )
               }
               )}
             
             </div>
-            
+            <div className="tags-additional">
+              {
+                (rating===1)?<div ><Cleanliness1Container></Cleanliness1Container></div>:null
+
+              }
+              {
+                (rating===2)?<div><Cleanliness2Container></Cleanliness2Container></div>:null
+
+              }
+              {
+                (rating===4)?<div><Cleanliness4Container></Cleanliness4Container></div>:null
+
+              }
+              {
+                (rating===3)?<div><Cleanliness3Container></Cleanliness3Container></div>:null
+
+              }
+              {
+                (rating===5)?<div><Cleanliness5Container></Cleanliness5Container></div>:null
+
+              }
+           </div>     
       </div>
     </div>
   );

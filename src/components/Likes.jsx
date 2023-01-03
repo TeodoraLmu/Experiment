@@ -1,9 +1,8 @@
 import React from "react";
 import {useState} from "react";
 import logo  from './Travelbuddy.png'
-import likestTags from './likesTags';
-import Like from './Like';
-import LikesContainer from './LikesContainer';
+import Like from './Likes/Like';
+import LikesContainer from './Likes/LikesContainer';
 import './Likes.css';
 <script src="./script.js"></script>
 function Likes(){

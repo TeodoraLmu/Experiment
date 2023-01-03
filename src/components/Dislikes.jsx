@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from "react";
-import DislikesContainer from "./DislikesContainer";
+import DislikesContainer from "./Dislikes/DislikesContainer";
 import logo  from './Travelbuddy.png'
 function Dislikes(){
     const [comment, setComment] = useState("");
